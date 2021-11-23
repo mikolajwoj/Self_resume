@@ -1,0 +1,37 @@
+a{
+    color: red;
+} 
+h1, h2{
+    color: black;  
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+    font-size: 40px;
+}  
+
+#headshot { 
+    border: 1px solid gray; 
+    padding: 2px; 
+    margin: 8px;
+    max-width: 100px;     
+    border-radius: 25px;
+} 
+
+.experience{
+    border: inset 1px;
+    margin-bottom: 4px; 
+    padding: 4px; 
+    background-color: gray; 
+    color: #222; 
+
+} 
+.experience .title{
+    font-size: 15px; 
+    font-style: italic; 
+    color: blanchedalmond;
+
+}
+img{
+    max-width: 500px;
+}
+.gradelabel{
+    margin: 15px;
+}
