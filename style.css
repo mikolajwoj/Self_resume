@@ -1,18 +1,17 @@
-a{
-    color: red;
-} 
 h1, h2{
     color: black;  
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
-    font-size: 40px;
+    font-size: 25px;
 }  
-
+main{
+    grid-area: main;
+}
 #headshot { 
     border: 1px solid gray; 
     padding: 2px; 
     margin: 8px;
-    max-width: 100px;     
-    border-radius: 25px;
+    max-width: 50px;     
+    border-radius: 8px;
 } 
 
 .experience{
@@ -26,12 +25,67 @@ h1, h2{
 .experience .title{
     font-size: 15px; 
     font-style: italic; 
-    color: blanchedalmond;
+    color: blanchedalmond; 
+    font-weight: bold;
 
 }
 img{
-    max-width: 500px;
+    max-width: 250px;
 }
 .gradelabel{
     margin: 15px;
+} 
+aside{
+    grid-area: aside;
+}
+footer{
+    background-color: #202020; 
+    color: lightblue;
+    text-align: center; 
+    padding: 2px; 
+    position: fixed;
+    bottom: 0; 
+    left: 0;
+    width: 100%; 
+    grid-area: footer;
+} 
+#menu li{
+    display: inline; 
+    padding: 8px; 
+    background-color: darkgrey;
+} 
+#menu li a{
+    color: white !important; 
+    text-decoration: none;
+} 
+#menu li.active{
+    background-color: darkslateblue;
+} 
+#menu{
+    float: right; 
+    vertical-align: middle;
+}
+
+header {
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-around; 
+    align-items: center; 
+    grid-area: header;
+} 
+header #menu{
+    margin-left: auto; 
+}  
+.container{
+    display: grid; 
+    grid-template-areas: 
+        "header header"
+        "main aside"
+        "footer footer"; 
+    grid-template-columns: auto; 
+    grid-gap: 8px;
+}
+#formInfo{
+    font-size: 14px;
+    font-style: italic;
 }
