@@ -26,6 +26,8 @@ if (dayOfWeek === 0 || dayOfWeek === 6){
     showMessage("Since it is the weekend please be patience with my returning to your email"); 
 } 
 
+const mistake = "ditka"; 
+
 function showMessage(message){  
     formInfo.innerHTML = "<p>" + message + "</p>" ;
     // document.writeln("<p>" + message + "</p>"); 
@@ -42,7 +44,13 @@ contactForm.addEventListener("submit", function(event){
     showMessage("Please wait, sending your email");
 }); 
 
-// // const experiences = document.getElementsByClassName("experience"); 
-// // for(let x=0; x < experiences.length; x++){
-
-// // }
+const experiences = document.getElementsByClassName("experience"); 
+for(let x=0; x < experiences.length; x++) {
+    const item = experiences[x]; 
+    item.addEventListener("mouseenter", function(event) {
+        event.target.style = "background-color: #888888;";
+    }); 
+    item.addEventListener("mouseleave", function(event) {
+        event.target.style = "";
+    }); 
+}
