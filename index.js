@@ -1,13 +1,7 @@
 // index js 
 
-// var number = 5; 
-// let name = "Mikolash"; 
+import Contact from "./Contact.js"; 
 
-// number = 12; 
-// name ="Andriej "; 
-// //Writing to the document
-// document.writeln(name + number);
-// alert("Hello Website") 
 const formInfo = document.getElementById("formInfo"); 
 
 let hasJob = false; 
@@ -56,34 +50,3 @@ for(let x=0; x < experiences.length; x++) {
     }); 
 } 
 
-class Contact { 
-
-    constructor(form){
-        this.fullName = form.elements["fullName"].value; 
-        this.email = form.elements["email"].value;
-        this.subject = form.elements["subject"].value;
-        this.body = form.elements["msg"].value;
-    }
-
-
-
-    fullName = ""
-    email =  ""
-    subject = ""
-    body = "" 
-
-    send() { 
-        console.info(this.formatMessage());
-        showMessage("We're not sending emails yet... feature for version 2.2")
-    }
-
-    formatMessage()
-    {
-        return `To: ${this.fullName}
-                Email: ${this.email}
-                Subject: ${this.subject}
-                Body: ${this.body} 
-                `; 
-
-    }
-};
